@@ -14,6 +14,10 @@ resource "google_compute_instance" "default" {
   machine_type = "f1-micro"
   zone         = "europe-west4a"
 
+  depends_on   = [
+    google_project_service.project
+  ]
+
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-9"
