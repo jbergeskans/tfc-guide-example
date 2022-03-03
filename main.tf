@@ -9,6 +9,7 @@ resource "google_service_account" "default" {
 }
 
 resource "google_compute_instance" "default" {
+  project      = "jesper-tfcloud-testing"
   name         = "jespertest"
   machine_type = "f1-micro"
   zone         = "europe-west4a"
