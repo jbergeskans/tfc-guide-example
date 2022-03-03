@@ -12,7 +12,7 @@ resource "google_compute_instance" "default" {
   project      = "jesper-tfcloud-testing"
   name         = "jespertest"
   machine_type = "f1-micro"
-  zone         = "europe-west4a"
+  zone         = "europe-west4-a"
 
   depends_on   = [
     google_project_service.project,
