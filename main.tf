@@ -15,7 +15,8 @@ resource "google_compute_instance" "default" {
   zone         = "europe-west4a"
 
   depends_on   = [
-    google_project_service.project
+    google_project_service.project,
+    google_project_service.project2
   ]
 
   boot_disk {
